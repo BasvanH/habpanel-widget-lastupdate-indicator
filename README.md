@@ -10,8 +10,8 @@ Displays the time passed in hours when an item last received an update, it slowl
 * The javascript file: **[lastupdate-indicator.controller.js](https://github.com/BasvanH/habpanel-widget-lastupdate-indicator)**
 
 ## Prerequisites
-* You need to create a '_lastUpdate' item of type datetime for each device/item you want to monitor.
-* For each, create a rule which updates the '_lastUpdate' item to the last date it receved an update.
+* You need to create a **_lastUpdate** item of type datetime for each device/item you want to monitor.
+* For each, create a rule which updates the **_lastUpdate** item to the last date it receved an update.
 
 ## Example
 This is an example for an battery operated Zwave smoke detector, but it shows the base princaple.
@@ -36,11 +36,11 @@ end
 ## Installation
 * Create a folder within '/conf/html/' folder, name it 'lastupdate-indicator'.
 * Place the 'lastupdate-indicator.controller.js' file in the '/conf/html/lastupdate-indicator/' folder.
-* Import the downloaded **[Last update indicator.widget.json](https://github.com/BasvanH/habpanel-widget-openweathermap/blob/master/Last%20update%20indicator.widget.json)** widget to your HABpanel.
+* Import the downloaded **[Last update indicator.widget.json](https://github.com/BasvanH/habpanel-widget-lastupdate-indicator/blob/master/Last%20update%20indicator.widget.json)** widget to your HABpanel.
 * Add the widget to a dashboard, open the settings.
-  * Select the '_lastUpdate' item.
+  * Select the **_lastUpdate** item.
   * Set the desired name which will be displayed in the widget.
-  * Enjoy en drop me a like here on the [Openhab cummunity forum](https://community.openhab.org/t/!!!!).
+  * Enjoy en drop me a like here on the [Openhab cummunity forum](https://community.openhab.org/t/lastupdate-indicator-widget-for-habpanel/69498).
 
 The complete structure would look like this:
 
@@ -49,6 +49,6 @@ The complete structure would look like this:
       - lastupdate-indicator.controller.js
 
 ## Help
-If you need any help, use this [topic](https://community.openhab.org/t/!!!!!!) on the Openhab community forum.
+If you need any help, use this [topic](https://community.openhab.org/t/lastupdate-indicator-widget-for-habpanel/69498) on the Openhab community forum.
 
 For issues and feature requests, please use the [Issues module](https://github.com/BasvanH/habpanel-widget-lastupdate-indicator/issues) on Github.
