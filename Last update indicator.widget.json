@@ -14,7 +14,13 @@
             "id": "lastupdate_name",
             "label": "Name",
             "description": "The name displayed above the indicator."
+        },
+        {
+            "type": "color",
+            "id": "lastupdate_name_text_color",
+            "label": "Color",
+            "description": "Color of indicator text."
         }
     ],
-    "template": "<!-- For more information goto: https://github.com/BasvanH/habpanel-widget-lastupdate-indicator -->\n\n<div oc-lazy-load=\"['/static/lastupdate-indicator/lastupdate-indicator.controller.js']\">\n  <div style=\"margin:auto; padding:0px 0px 10px;\">{{config.lastupdate_name}}</div>\n     <div ng-controller=\"ngLastupdateCtrl\">\n         <div style=\"margin:auto; background-color:black; display:block; width:2em; height:2em; border-radius:20%; display:flex; align-items:center;\" ng-style=\"{'background-color':bgIndicator}\">\n           <h5 style=\"margin:auto;\">{{textIndicator}}</h5>\n         </div>\n     </div>\n</div>"
+    "template": "<!-- For more information goto: https://github.com/BasvanH/habpanel-widget-lastupdate-indicator -->\n\n<div oc-lazy-load=\"['/static/lastupdate-indicator/lastupdate-indicator.controller.js']\">\n  <div style=\"margin:auto; padding:0px 0px 10px;\">{{config.lastupdate_name}}</div>\n     <div ng-controller=\"ngLastupdateCtrl\">\n         <div style=\"margin:auto; background-color:black; display:block; width:2em; height:2em; border-radius:20%; display:flex; align-items:center;\" ng-style=\"{'background-color':bgIndicator}\">\n           <h5 style=\"margin:auto; color:{{config.lastupdate_name_text_color}}\">{{textIndicator}}</h5>\n         </div>\n     </div>\n</div>"
 }
