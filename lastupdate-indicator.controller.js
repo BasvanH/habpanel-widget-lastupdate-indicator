@@ -10,7 +10,8 @@
 						var state = $scope.itemState($scope.config.lastupdate_item);
 						var now = new Date();
 						var last = new Date(state.slice(0, state.lastIndexOf("+")) + "Z"); //Crappy safari doesnt like timezone format
-						var timeDiff = Math.abs(last.getTime() - now.getTime());
+						var state_tzo = last.getTimezoneOffset()  //get state timezone
+						var timeDiff = Math.abs(last.getTime() + state_tzo*60000 - now.getTime());
 						var diffHours = Math.ceil(timeDiff / (1000 * 3600));
 
 						var val = parseInt(diffHours);
