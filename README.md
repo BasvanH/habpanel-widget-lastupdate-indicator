@@ -13,7 +13,7 @@ Displays the time passed in hours when an item last received an update, it slowl
 * You need to create a **_lastUpdate** item of type datetime for each device/item you want to monitor.
 * For each, create a rule which updates the **_lastUpdate** item to the last date it receved an update.
 
-## Example
+## Example 1
 This is an example for an battery operated Zwave smoke detector, but it shows the base princaple.
 
 **zwave.items**
@@ -30,6 +30,23 @@ when
 	Thing "zwave:device:a5062334:node2" received update
 then
 	Zwave_Rookmelder_Gang_LastUpdate.postUpdate(new DateTimeType())
+end
+```
+
+## Example 2
+With this example, suggested by [microneer](https://github.com/microneer), you can combine all devices in just one rule. Create a DateTime item per device with the trailing `_LUD` suffix.
+
+```
+// This Rule triggers when any Item in the gRecordLastUpdate Group is updated, and
+// updates a virtual DateTime item with the same name as the Item but with _LUD as 
+// a suffix, setting it to the current date and time.
+rule "Record Last Update"
+when
+	Member of gRecordLastUpdate received update
+then
+	// Post an update to the item with the same name and _LUD suffix
+ 	sendCommand( triggeringItem.name+"_LUD", now.toString)
+//	logInfo('lastUpdate', triggerItem.name)
 end
 ```
 
