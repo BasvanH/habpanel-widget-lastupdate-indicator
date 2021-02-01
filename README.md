@@ -1,4 +1,5 @@
 # Last update indicator widget for HABPanel (OpenHAB)
+By making a donation, no matter how small, you are saying thanks and drawing a smile on my face because I will know, somebody thought my project was useful and worth paying for 🤩. [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QARL4KXHHZSK8)
 
 ## Description
 Displays the time passed in hours when an item last received an update, it slowly goes to red when time increases. Usefull when using battery operated Zwave/Zigbee devices, those could die/drop of the network without you noticing. You cannot set the indicator directory to the item, you need to create a monitor rule for each device you wish to monitor. The rule updates a datetime item reflecting the last updated time of the monitored item.
